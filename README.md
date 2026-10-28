@@ -8,6 +8,6 @@
 ### Testing for UPEC-DIT
 
 - Encryption: [folder](./pqc_hqc_hardware/encrypt-upec-dit/)
-- Decryption:
+- Decryption: [folder](./pqc_hqc_hardware/decrypt-upec-dit/)
 - Key Generation: [folder](./pqc_hqc_hardware/keygen-upec-dit/)
 - Polynomial multiplication: [folder](./pqc_hqc_hardware/poly_mult-upec-dit/)
