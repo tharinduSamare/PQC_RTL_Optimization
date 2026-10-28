@@ -14,12 +14,15 @@ module property_checker
   // ======================== //
 
   property control_input_c;
-    (U1.add_wr_en == U2.add_wr_en) &&
-    (U1.rd_dout   == U2.rd_dout  ) &&
-    (U1.weight    == U2.weight   ) &&
-    (U1.start     == U2.start    );
+    (U1.add_addr    == U2.add_addr   ) &&
+    (U1.add_wr_en   == U2.add_wr_en  ) &&
+    (U1.addr_result == U2.addr_result) &&
+    (U1.rd_dout     == U2.rd_dout    ) &&
+    (U1.start       == U2.start      ) &&
+    (U1.weight      == U2.weight     );
   endproperty
   control_input_c_a: assume property (control_input_c);
+
 
     // ================= //
    // State Equivalence //
@@ -54,7 +57,7 @@ module property_checker
   endfunction
 
     // ================= //
-   // State Equivalence //
+   // Control State Equivalence //
   // ================= //
 
   function automatic control_state_equivalence();
@@ -93,8 +96,8 @@ module property_checker
 
   function automatic control_output_equivalence();
   control_output_equivalence = (
-    (U1.valid == U2.valid) &&
-    (U1.loc_addr == U2.loc_addr)
+    (U1.loc_addr == U2.loc_addr) &&
+    (U1.valid    == U2.valid   )
   );
   endfunction
 

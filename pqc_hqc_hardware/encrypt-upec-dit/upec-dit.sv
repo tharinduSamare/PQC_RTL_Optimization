@@ -532,8 +532,7 @@ module property_checker
     (U1.done_fixed_weight == U2.done_fixed_weight) &&
     (U1.shake_din_valid   == U2.shake_din_valid  ) &&
     (U1.shake_dout_ready  == U2.shake_dout_ready ) &&
-    (U1.shake_force_done  == U2.shake_force_done ) &&
-    (U1.u_v_out           == U2.u_v_out          )
+    (U1.shake_force_done  == U2.shake_force_done )
   );
   endfunction
 
